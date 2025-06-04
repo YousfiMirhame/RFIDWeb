@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Startseite";
+}
+
+<h2>Bitte scannen Sie den Code oder geben Sie ihn ein</h2>
+
+<input id="codeInput" maxlength="8" autofocus placeholder="8-stelliger Code" style="font-size: 1.5em; padding: 8px;" />
+
+<script>
+    const input = document.getElementById("codeInput");
+
+    input.addEventListener("input", function () {
+        if (this.value.length === 8) {
+            // Redirection automatique
+            window.location.href = "/User/Index?id=" + this.value;
+        }
+    });
+</script>

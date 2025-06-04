@@ -1,0 +1,52 @@
+@model RFIDWeb.Models.User
+@{
+    ViewData["Title"] = "Détail Utilisateur";
+}
+
+<!-- Zone de saisie en haut -->
+<div style="margin-bottom: 20px;">
+    <label for="codeInput"><strong>Neuen Code scannen oder eingeben:</strong></label><br />
+    <input id="codeInput" maxlength="8" autofocus placeholder="8-stelliger Code" style="font-size: 1.2em; padding: 6px;" />
+</div>
+
+<!-- Script JS pour redirection automatique -->
+<script>
+    const input = document.getElementById("codeInput");
+
+    input.addEventListener("input", function () {
+        if (this.value.length === 8) {
+            window.location.href = "/User/Index?id=" + this.value;
+        }
+    });
+</script>
+
+<!-- Affichage des données utilisateur -->
+<div style="font-family:Arial; padding:20px">
+    @if (!string.IsNullOrEmpty(Model.Photo))
+    {
+        <img src="@Model.Photo" alt="Photo" width="200" /><br />
+    }
+
+    @if (!string.IsNullOrEmpty(Model.Nom))
+    {
+        <h2>@Model.Nom</h2>
+        <p><strong>Adresse :</strong> @Model.Adresse</p>
+        <p><strong>Date de Naissance :</strong> @Model.DateNaissance.ToString("dd/MM/yyyy")</p>
+    }
+
+    @if (!string.IsNullOrEmpty(Model.Description))
+    {
+        <p><strong>Description :</strong> @Model.Description</p>
+    }
+
+    @if (!string.IsNullOrEmpty(Model.Audio))
+    {
+        <audio controls autoplay>
+            <source src="@Model.Audio" type="audio/mpeg" />
+            Dein Browser unterstützt kein Audio.
+        </audio>
+    }
+
+    <br />
+    <a href="/" style="font-size: 1.2em;">← Zurück zur Startseite</a>
+</div>

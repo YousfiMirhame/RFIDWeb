@@ -1,0 +1,7 @@
+C:\Users\lenovo\RFIDWeb\publish\..exe
+C:\Users\lenovo\RFIDWeb\publish\appsettings.Development.json
+C:\Users\lenovo\RFIDWeb\publish\appsettings.json
+C:\Users\lenovo\RFIDWeb\publish\..dll
+C:\Users\lenovo\RFIDWeb\publish\..deps.json
+C:\Users\lenovo\RFIDWeb\publish\..runtimeconfig.json
+C:\Users\lenovo\RFIDWeb\publish\..pdb
