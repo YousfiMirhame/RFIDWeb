@@ -45,7 +45,7 @@ namespace RFIDWeb.Controllers
                     {
                         Id = "11112222",
                         Description = "Herzlich willkommen",
-                        Audio = "/audio/wwarning_converted.mp3"
+                        Audio = "/audio/warning_converted.mp3"
                     };
 
                 default: return null;
