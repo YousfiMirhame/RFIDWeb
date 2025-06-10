@@ -41,16 +41,16 @@
 
     @if (!string.IsNullOrEmpty(Model.Audio))
     {
-        <button onclick="document.getElementById('audioAlert').play()" style="font-size: 1.2em; padding: 10px; margin-top: 20px;">
-            🔊 Audio abspielen
+        <button onclick="document.getElementById('audioPlayer').play()" style="padding:10px;font-size:1em;">
+            🔊 Audio anhören
         </button>
-
-        <audio id="audioAlert">
+        <br /><br />
+        <audio id="audioPlayer">
             <source src="@Model.Audio" type="audio/mpeg" />
             Dein Browser unterstützt kein Audio.
         </audio>
     }
 
-    <br /><br />
+    <br />
     <a href="/" style="font-size: 1.2em;">← Zurück zur Startseite</a>
 </div>
